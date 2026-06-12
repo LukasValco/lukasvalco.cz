@@ -24,6 +24,7 @@ který aktivně sdílí znalosti a pomáhá druhým.
 ## Fázový plán
 
 ### Fáze 1 — osobní hub (právě stavíme)
+
 - Bio / O mně
 - Kariéra / Timeline
 - Certifikáty a vzdělání
@@ -32,6 +33,7 @@ který aktivně sdílí znalosti a pomáhá druhým.
 - Přehled služeb (konzultace, PV\*SOL simulace)
 
 ### Fáze 2 — obsah a nástroje
+
 - Blog roste (témata: FV, AI, drony, osobní rozvoj, kariéra)
 - Znalostní báze (Markdown, Content Collections)
 - Kalkulačky a nástroje (React islands v Astro):
@@ -40,6 +42,7 @@ který aktivně sdílí znalosti a pomáhá druhým.
   - Diagnostika výroby FVE
 
 ### Fáze 3 — digitální dvojče
+
 - AI chatbot / poradna (Claude API nebo podobné)
 - Vložen jako widget, nezávislý na Astro
 
@@ -59,13 +62,13 @@ který aktivně sdílí znalosti a pomáhá druhým.
 
 Reálný obsah pro web je v **Atlasu** (`D:\projects\atlas`):
 
-| Co | Kde v Atlasu |
-|----|-------------|
-| Bio, kariéra, hodnoty | `wiki/personal/lukas-valco.md` |
-| Certifikáty (seznam) | `raw/personal/certifikaty/index.md` |
-| Certifikáty (PDF) | `raw/personal/certifikaty/` |
-| Osobní brand, záměr | `raw/personal/2026-06-12-osobni-brand-myslenky.md` |
-| Plán webu | `ops/personal-web.md` |
+| Co                    | Kde v Atlasu                                       |
+| --------------------- | -------------------------------------------------- |
+| Bio, kariéra, hodnoty | `wiki/personal/lukas-valco.md`                     |
+| Certifikáty (seznam)  | `raw/personal/certifikaty/index.md`                |
+| Certifikáty (PDF)     | `raw/personal/certifikaty/`                        |
+| Osobní brand, záměr   | `raw/personal/2026-06-12-osobni-brand-myslenky.md` |
+| Plán webu             | `ops/personal-web.md`                              |
 
 ---
 
@@ -80,11 +83,13 @@ Web se upravuje třemi nástroji — všechny pracují se stejnými soubory:
 Nástroje se přepínají plynule (např. podle usage limitů). Kontext přenáší tento soubor.
 
 ### Jak nasadit změny
+
 ```bash
 git add .
 git commit -m "popis změny"
 git push
 ```
+
 Cloudflare Pages automaticky nasadí do ~60 sekund.
 
 ---
