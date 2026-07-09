@@ -1,0 +1,208 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+import { getPermalink } from '~/utils/permalinks';
+
+const metadata = {
+  title: 'O mně',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero tagline="O mně">
+    <Fragment slot="title">
+      Vždy mě víc než tituly bavilo <span class="text-accent dark:text-white">řešit</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Ať šlo o IT servis, instalaci peoplemetrů napříč sociálními vrstvami, nebo servis speciálních vozidlových systémů
+      pro Policii ČR — pokaždé jsem byl nejspokojenější ve chvíli, kdy jsem konkrétnímu člověku pomohl vyřešit jeho
+      problém. Tuhle radost si nesu až dodnes.
+    </Fragment>
+  </Hero>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    id="cesta"
+    isReversed
+    tagline="Jak jsem se dostal k fotovoltaice"
+    items={[
+      {
+        title: 'Vědomé rozhodnutí (2019)',
+        description:
+          'Solární energetika mi přišla jako obor s budoucností. Místo abych čekal na příležitost, šel jsem jí naproti — sám si doplnil vzdělání a upravil profil.',
+      },
+      {
+        title: 'Dvě nabídky bez hledání',
+        description:
+          'Výsledkem byly dvě po sobě jdoucí nabídky bez aktivního hledání: nejprve Fronius, pak E.ON. Investuj do sebe, buď vidět, příležitosti přijdou samy.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/portrait/avatar-omne-cesta.png',
+      alt: 'Kreslený návrh: Lukáš u návrhu FV systému v PV*SOL (bude nahrazeno vlastní fotkou)',
+      width: 800,
+      height: 600,
+    }}
+  >
+    <Fragment slot="content">
+      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-4">Cesta do solární energetiky</h2>
+      <p>
+        V roce 2019 jsem se záměrně rozhodl pro změnu. Dnes vím, že tohle byl správný vzorec — proaktivita se vyplácí.
+      </p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-subtle dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    id="dnes"
+    isAfterContent
+    items={[
+      {
+        title: 'Senior specialista TP FV systémů',
+        description:
+          'Pracuji ve společnosti E.ON Energie, a.s., vedu malý tým a řeším eskalované případy. Učím kolegy, píšu e-learning a buduji znalostní bázi.',
+      },
+      {
+        title: 'Fotovoltaický expert a energetický poradce',
+        description:
+          'Certifikovaný Fotovoltaický expert ČFA (č. CFA-25-036/FTVEXP) a energetický poradce — obě kvalifikace jsem si aktivně vyhledal a doplnil.',
+      },
+      {
+        title: 'Termovizní diagnostika dronem',
+        description: 'Mám zkušenosti s termovizní kontrolou FV panelů dronem DJI Mavic 3T a dále se v ní zdokonaluji.',
+      },
+      {
+        title: 'Revize odborného obsahu',
+        description:
+          'Podílím se na revizi článků o fotovoltaice v <a class="underline" href="https://www.eon.cz/radce/" target="_blank" rel="noopener">poradně E.ON</a>.',
+      },
+      {
+        title: 'Aktivně se vzdělávám v AI',
+        description:
+          'Procházím kompletním kurikulem AI inženýrství od <a class="underline" href="https://edwarddonner.com/curriculum/" target="_blank" rel="noopener">Edwarda Donnera</a> — od tvorby agentů po nasazení reálných aplikací. AI beru jako násobič znalostí a hledám pro ni konkrétní využití ve fotovoltaice a energetice.',
+      },
+      {
+        title: 'Žiju, co hlásám',
+        description:
+          'Fotovoltaika jede i na střeše mého domu v jihočeském Dražíči, do práce jezdím elektromobilem Kia Niro EV.',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-4">Co dělám dnes</h2>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-subtle dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="Co mě charakterizuje"
+    subtitle="Hodnoty a přístup, které se prolínají vším, co dělám."
+    columns={3}
+    items={[
+      {
+        title: 'Empatie a čich na lidi',
+        description: 'Komunikuji přímo a bez okolků. Telefon mám raději než e-mail — věci se řeší rychleji.',
+        icon: 'tabler:heart-handshake',
+      },
+      {
+        title: 'Kritické a strukturované myšlení',
+        description: 'Důkladně zvažuji možnosti. Někdy mě to zpomalí, ale výstupy jsou promyšlené a spolehlivé.',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: 'Vzdělávání jako součást práce',
+        description: 'Osobní rozvoj neberu jako povinnost, ale jako nástroj k lepší pomoci druhým.',
+        icon: 'tabler:book',
+      },
+      {
+        title: 'Předávání znalostí',
+        description: 'Školím obchodní zástupce, zákaznické linky i reklamace. Vím, kde hledat — ne vše nazpaměť.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Proaktivita (agency)',
+        description: 'Když vidím problém, aktivně zkouším, plánuji a řeším. Nečekám, až mě někdo upozorní.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'AI jako násobič',
+        description: 'S AI nástroji se aktivně posouvám — beru je jako akceleraci znalostí, ne jako náhradu.',
+        icon: 'tabler:robot',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    id="osobni"
+    isReversed
+    tagline="Mimo práci"
+    title="Život na vesnici"
+    image={{
+      src: '~/assets/images/lifestyle/placeholder-dum-fve-zahrada.png',
+      alt: 'Kreslený návrh: dřevostavba s FVE a zahradou (bude nahrazeno vlastní fotkou)',
+      width: 800,
+      height: 600,
+    }}
+    items={[
+      {
+        title: 'Rodina a domov',
+        description:
+          'S manželkou Petrou a dvěma dětmi žijeme ve vlastní dřevostavbě v nízkoenergetickém standardu s velkou zahradou v jihočeském Dražíči.',
+      },
+      {
+        title: 'Zahrada, běh, rybaření',
+        description: 'Velká zahrada je důležité místo — zejména v létě. Rád běhám, rybařím a sportuji.',
+      },
+      {
+        title: 'Dron v práci i pro přírodu',
+        description:
+          'DJI Mavic 3T používám v práci (fotky a termovize FV panelů) i jako pilot pro vyhledávání srnčat termokamerou při jarních senosečích — za tuto aktivitu jsem získal 2. místo ve firemní kampani E.ON.',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <p>„Život na vesnici byl vždy mým snem. Jsem šťastný, že to tady s manželkou můžeme dávat dětem.“</p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-subtle dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Spojme se',
+        href: getPermalink('/kontakt'),
+        icon: 'tabler:mail',
+      },
+      { text: 'Moje cesta', href: getPermalink('/kariera') },
+    ]}
+    title="Proč tohle místo"
+    subtitle="Věřím, že znalosti jsou tu od toho, aby se sdílely — ne schovávaly. Pokud hledáte poradenství nebo vás zajímá, co se děje v energetice, ozvěte se."
+  />
+</Layout>

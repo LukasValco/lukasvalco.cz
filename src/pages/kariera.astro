@@ -1,0 +1,128 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import HeroText from '~/components/widgets/HeroText.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+import { getPermalink } from '~/utils/permalinks';
+
+const metadata = {
+  title: 'Kariéra',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText
+    tagline="Kariéra"
+    title="Cesta od terénní podpory k solární energetice"
+    subtitle="Přechody jsem neplánoval lineárně — reagoval jsem na příležitosti a vnitřní signály. Červenou nití zůstává radost z pomoci druhým a proaktivní přístup."
+  />
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Pracovní zkušenosti"
+    items={[
+      {
+        title:
+          'Senior Specialista TP — Solární Systémy <br /> <span class="font-normal">E.ON Energie, a.s., České Budějovice</span> <br /> <span class="text-sm font-normal">2021 – dosud</span>',
+        description:
+          'FV technická podpora, školení, znalostní báze. Vedení malého týmu, řešení eskalovaných případů, tvorba e-learningu a zkušenosti s termovizní kontrolou FV panelů dronem. Podílím se i na revizi odborných článků o fotovoltaice v poradně E.ON.',
+        icon: 'tabler:solar-panel',
+      },
+      {
+        title:
+          'Technical Support Solar Energy <br /> <span class="font-normal">Fronius CZ, Praha</span> <br /> <span class="text-sm font-normal">2020 – 2021</span>',
+        description: 'Technická podpora fotovoltaiky — vstup do oboru solární energetiky.',
+        icon: 'tabler:briefcase',
+      },
+      {
+        title:
+          'Service Technician <br /> <span class="font-normal">URC Systems, Praha</span> <br /> <span class="text-sm font-normal">2015 – 2019</span>',
+        description: 'Servis vozidlových systémů pro Policii ČR, roboti Talon. Certifikace v Bostonu (QinetiQ).',
+        icon: 'tabler:briefcase',
+      },
+      {
+        title:
+          'Quality Control Analyst <br /> <span class="font-normal">Nielsen, Praha</span> <br /> <span class="text-sm font-normal">2014 – 2015</span>',
+        description: 'Datová kvalita a analýza napříč mezinárodními regiony.',
+        icon: 'tabler:briefcase',
+      },
+      {
+        title:
+          'Technik <br /> <span class="font-normal">Nielsen</span> <br /> <span class="text-sm font-normal">2013 – 2014</span>',
+        description: 'Terénní instalace peoplemetrů — komunikace s klienty napříč sociálními vrstvami.',
+        icon: 'tabler:briefcase',
+      },
+      {
+        title:
+          'Vedoucí divize obchod <br /> <span class="font-normal">SEGURO s.r.o.</span> <br /> <span class="text-sm font-normal">2009 – 2013</span>',
+        description: 'Kamerové systémy, zabezpečení, e-shop.',
+        icon: 'tabler:briefcase',
+      },
+      {
+        title:
+          'Technik výpočetní techniky / Postservisu <br /> <span class="font-normal">Česká pošta</span> <br /> <span class="text-sm font-normal">2006 – 2009</span>',
+        description: 'IT servis a podpora, servis kompletačních linek Kern.',
+        icon: 'tabler:briefcase',
+      },
+      {
+        title: 'Dnes',
+        icon: 'tabler:check',
+      },
+    ]}
+    classes={{ container: 'max-w-3xl' }}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="Kariérní vzorec"
+    title="Investice do sebe → příležitosti přicházejí samy"
+    items={[
+      {
+        title: 'Pivot do FV (2019/2020)',
+        description:
+          'Vědomé, proaktivní rozhodnutí — identifikoval jsem perspektivní obor, sám si doplnil vzdělání (e-learning) a upravil profil.',
+      },
+      {
+        title: 'Inbound nabídky',
+        description: 'Výsledkem byly dvě po sobě jdoucí nabídky bez aktivního hledání — Fronius, poté E.ON.',
+      },
+      {
+        title: 'Proaktivita jako červená nit',
+        description:
+          'Stejný vzorec se opakuje: certifikace v Bostonu, samostatné prohlubování znalostí termovize dronem — vždy z vlastní iniciativy.',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <p>Nepřecházel jsem mezi rolemi náhodně. Pokaždé šlo o reakci na příležitost a investici do vlastního profilu.</p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-subtle dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Certifikáty a vzdělání',
+        href: getPermalink('/certifikaty'),
+        icon: 'tabler:certificate',
+      },
+      { text: 'Kontakt', href: getPermalink('/kontakt') },
+    ]}
+    title="Zajímá vás víc?"
+    subtitle="Podívejte se na mé certifikáty a vzdělání, nebo se rovnou ozvěte."
+  />
+</Layout>

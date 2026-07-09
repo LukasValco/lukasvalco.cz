@@ -1,0 +1,319 @@
+---
+import { Icon } from 'astro-icon/components';
+
+import Layout from '~/layouts/PageLayout.astro';
+
+import HeroText from '~/components/widgets/HeroText.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+import { getPermalink } from '~/utils/permalinks';
+
+const metadata = {
+  title: 'Certifikáty a vzdělání',
+};
+
+type Cert = {
+  title: string;
+  description: string;
+  icon: string;
+  date: string;
+  scope?: string;
+  file?: string;
+  note?: string;
+};
+
+const expertModules: Cert[] = [
+  {
+    title: 'ON-GRID',
+    description: 'Základy fotovoltaiky a FVS síťové systémy.',
+    icon: 'tabler:plug-connected',
+    date: '7. 1. 2025',
+    scope: '16 hod',
+    file: '/certifikaty/2025-01-07_CFA_fotovoltaicky-expert-on-grid-zaklady.pdf',
+  },
+  {
+    title: 'OFF-GRID',
+    description: 'Návrh, dimenzování a instalace ostrovních FVS, ekonomika.',
+    icon: 'tabler:home-bolt',
+    date: '9. 1. 2025',
+    scope: '16 hod',
+    file: '/certifikaty/2025-01-09_CFA_fotovoltaicky-expert-off-grid.pdf',
+  },
+  {
+    title: 'ACCUMULATION',
+    description: 'Ukládání energie ve FVS, ochrana proti blackoutu, druhy akumulací.',
+    icon: 'tabler:battery-charging',
+    date: '14. 1. 2025',
+    scope: '16 hod',
+    file: '/certifikaty/2025-01-14_CFA_fotovoltaicky-expert-accumulation.pdf',
+  },
+  {
+    title: 'DESIGN',
+    description: 'Projektování FVS softwarem, simulace 2D/3D, zastínění, zátěžové profily.',
+    icon: 'tabler:chart-dots',
+    date: '16. 1. 2025',
+    scope: '16 hod',
+    file: '/certifikaty/2025-01-16_CFA_fotovoltaicky-expert-design-projektovani.pdf',
+  },
+];
+
+const otherCerts: Cert[] = [
+  {
+    title: 'PV*SOL Advanced',
+    description: 'Odborná práce s energetickým softwarem PV*SOL — projektování a simulace FV systémů.',
+    icon: 'tabler:device-desktop-analytics',
+    date: '29. 1. 2025',
+    scope: '16 hod',
+    file: '/certifikaty/2025-01-29_CFA_pvsol-advanced.pdf',
+  },
+  {
+    title: 'Elektromontér FV systémů',
+    description: 'Přípravný kurz k profesní kvalifikaci Electrician for Photovoltaic Systems (ČFA).',
+    icon: 'tabler:bolt',
+    date: '16. 10. 2024',
+    scope: '16 hod',
+    file: '/certifikaty/2024-10-16_CFA_elektromonter-fv-systemu.pdf',
+  },
+  {
+    title: 'Instalace FVS na bytové domy',
+    description: 'Odborné školení ČVUT Praha — Univerzitní centrum energeticky efektivních budov.',
+    icon: 'tabler:building',
+    date: '16. 4. 2024',
+    scope: '8 hod · č. 2024-563',
+    file: '/certifikaty/2024-04-16_CVUT_instalace-fvs-bytove-domy.pdf',
+  },
+  {
+    title: 'Pilotní průkaz dronu A1/A3',
+    description: 'ÚCL Praha. DJI Mavic 3T s termokamerou — diagnostika FV i pilotování pro myslivost.',
+    icon: 'tabler:drone',
+    date: '2025',
+    note: 'Průkaz pilota',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero ******************* -->
+
+  <HeroText
+    tagline="Certifikáty a vzdělání"
+    title="Kvalifikace, kterou jsem si aktivně doplnil"
+    subtitle="Vzdělávání beru jako nedílnou součást práce. Většinu odborných kvalifikací jsem si vyhledal a doplnil z vlastní iniciativy. U většiny certifikátů je k dispozici originální PDF ke stažení."
+  />
+
+  <!-- ČFA badge — kompaktně ******** -->
+
+  <div
+    class="mx-auto -mt-8 mb-12 flex max-w-md items-center gap-4 rounded-2xl border border-gray-200 bg-white p-4 shadow-sm dark:border-slate-700 dark:bg-slate-800"
+  >
+    <img
+      src="/logo-cfa.png"
+      alt="Logo České fotovoltaické asociace"
+      width="500"
+      height="278"
+      class="h-12 w-auto shrink-0"
+      loading="lazy"
+    />
+    <div class="text-sm">
+      <p class="font-semibold text-gray-900 dark:text-white">Držitel certifikace ČFA</p>
+      <p class="text-muted dark:text-slate-400">Fotovoltaický expert · č. CFA-25-036/FTVEXP</p>
+    </div>
+  </div>
+
+  <!-- Hlavní certifikace ******** -->
+
+  <section class="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
+    <div class="mb-8 text-center">
+      <p class="text-secondary mb-2 text-sm font-bold tracking-wider uppercase">Hlavní certifikace</p>
+      <h2 class="font-heading text-3xl font-bold tracking-tight md:text-4xl dark:text-white">Vrcholné kvalifikace</h2>
+    </div>
+
+    <div class="grid gap-6 lg:grid-cols-2">
+      <!-- FV Expert -->
+      <article
+        class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#1E3A5F] to-[#12233B] p-8 text-white shadow-xl"
+      >
+        <div class="absolute -top-8 -right-8 h-40 w-40 rounded-full bg-white/10 blur-2xl"></div>
+        <div class="relative">
+          <div class="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-white/15 backdrop-blur">
+            <Icon name="tabler:certificate" class="h-7 w-7 text-white" />
+          </div>
+          <h3 class="mb-1 text-2xl font-bold">Fotovoltaický expert</h3>
+          <p class="mb-4 text-sm font-medium text-white/70">Master of Photovoltaic Systems</p>
+          <p class="mb-6 text-sm text-white/80">
+            Česká fotovoltaická asociace · 16. 1. 2025 · 64 hod<br />
+            Číslo CFA-25-036/FTVEXP — oprávnění používat označení a logo ČFA.
+          </p>
+          <a
+            href="/certifikaty/2025-01-16_CFA_fotovoltaicky-expert-SOUHRNNY.pdf"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-[#1E3A5F] shadow-md transition hover:shadow-lg"
+          >
+            <Icon name="tabler:download" class="h-4 w-4" />
+            Stáhnout certifikát (PDF)
+          </a>
+        </div>
+      </article>
+
+      <!-- Energetický poradce -->
+      <article
+        class="relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-8 shadow-sm dark:border-slate-700 dark:bg-slate-800"
+      >
+        <div class="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 dark:bg-primary/20">
+          <Icon name="tabler:bulb" class="text-primary h-7 w-7" />
+        </div>
+        <h3 class="mb-1 text-2xl font-bold dark:text-white">Energetický poradce</h3>
+        <p class="text-muted mb-4 text-sm font-medium dark:text-slate-400">ČFA – Ústav FV a Elektromobility</p>
+        <p class="text-muted mb-6 text-sm dark:text-slate-300">
+          Závěrečná zkouška složena 27. 2. 2026. Online + prezenční modul, financováno EU/NPO.
+        </p>
+        <span
+          class="inline-flex items-center gap-2 rounded-full bg-green-50 px-4 py-2 text-xs font-semibold text-green-800 dark:bg-green-950/40 dark:text-green-200"
+        >
+          <Icon name="tabler:circle-check" class="h-4 w-4" />
+          Certifikát získán
+        </span>
+      </article>
+    </div>
+  </section>
+
+  <!-- Dílčí moduly Fotovoltaického experta ******** -->
+
+  <section class="bg-subtle py-16 dark:bg-transparent">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6">
+      <div class="mb-10 text-center">
+        <p class="text-secondary mb-2 text-sm font-bold tracking-wider uppercase">Osmidenní modul ČFA</p>
+        <h2 class="font-heading text-3xl font-bold tracking-tight md:text-4xl dark:text-white">
+          Dílčí moduly Fotovoltaického experta
+        </h2>
+        <p class="text-muted mx-auto mt-3 max-w-2xl text-base dark:text-slate-400">
+          Čtyři navazující bloky, ze kterých je složena hlavní certifikace. Každý zakončený samostatným osvědčením.
+        </p>
+      </div>
+
+      <div class="grid gap-5 sm:grid-cols-2">
+        {
+          expertModules.map((c) => (
+            <article class="group flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg dark:border-slate-700 dark:bg-slate-800">
+              <div class="mb-4 flex items-start justify-between">
+                <div class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 dark:bg-primary/20">
+                  <Icon name={c.icon} class="text-primary h-5 w-5" />
+                </div>
+                <div class="text-right text-xs">
+                  <div class="text-muted dark:text-slate-400">{c.date}</div>
+                  {c.scope && <div class="text-muted/70 dark:text-slate-500">{c.scope}</div>}
+                </div>
+              </div>
+              <h3 class="mb-2 text-lg font-bold tracking-tight dark:text-white">{c.title}</h3>
+              <p class="text-muted mb-4 grow text-sm dark:text-slate-300">{c.description}</p>
+              {c.file && (
+                <a
+                  href={c.file}
+                  target="_blank"
+                  rel="noopener"
+                  class="text-primary inline-flex items-center gap-1.5 text-sm font-medium hover:underline"
+                >
+                  <Icon name="tabler:download" class="h-4 w-4" />
+                  Stáhnout PDF
+                </a>
+              )}
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Další specializace ******** -->
+
+  <section class="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+    <div class="mb-10 text-center">
+      <p class="text-secondary mb-2 text-sm font-bold tracking-wider uppercase">Další specializace</p>
+      <h2 class="font-heading text-3xl font-bold tracking-tight md:text-4xl dark:text-white">
+        Specializované kurzy a oprávnění
+      </h2>
+    </div>
+
+    <div class="grid gap-5 sm:grid-cols-2">
+      {
+        otherCerts.map((c) => (
+          <article class="group flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg dark:border-slate-700 dark:bg-slate-800">
+            <div class="mb-4 flex items-start justify-between">
+              <div class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 dark:bg-primary/20">
+                <Icon name={c.icon} class="text-primary h-5 w-5" />
+              </div>
+              <div class="text-right text-xs">
+                <div class="text-muted dark:text-slate-400">{c.date}</div>
+                {c.scope && <div class="text-muted/70 dark:text-slate-500">{c.scope}</div>}
+              </div>
+            </div>
+            <h3 class="mb-2 text-lg font-bold tracking-tight dark:text-white">{c.title}</h3>
+            <p class="text-muted mb-4 grow text-sm dark:text-slate-300">{c.description}</p>
+            {c.file ? (
+              <a
+                href={c.file}
+                target="_blank"
+                rel="noopener"
+                class="text-primary inline-flex items-center gap-1.5 text-sm font-medium hover:underline"
+              >
+                <Icon name="tabler:download" class="h-4 w-4" />
+                Stáhnout PDF
+              </a>
+            ) : c.note ? (
+              <span class="text-muted inline-flex items-center gap-1.5 text-xs dark:text-slate-400">
+                <Icon name="tabler:info-circle" class="h-4 w-4" />
+                {c.note}
+              </span>
+            ) : null}
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- Formální vzdělání ******** -->
+
+  <Steps
+    tagline="Formální vzdělání"
+    title="Vzdělání a kvalifikace"
+    items={[
+      {
+        title: 'Výuční list — elektrikář <br /> <span class="font-normal">Roční rekvalifikační kurz · 2023/2024</span>',
+        description:
+          'Profesní kvalifikace: Montér slaboproudých zařízení, elektrických rozvaděčů, elektrických sítí a hromosvodů.',
+        icon: 'tabler:plug-connected',
+      },
+      {
+        title:
+          'Certifikace pro robotické systémy Talon <br /> <span class="font-normal">QinetiQ North America, Boston (USA)</span>',
+        description: 'Školení pro opravy robotických systémů během působení v URC Systems.',
+        icon: 'tabler:robot',
+      },
+      {
+        title:
+          'Maturita s vyznamenáním <br /> <span class="font-normal">SŠ elektrotechnická COP Hluboká nad Vltavou · 2005</span>',
+        description: 'Obor mechanik–elektronik.',
+        icon: 'tabler:school',
+      },
+    ]}
+    classes={{ container: 'max-w-3xl' }}
+  />
+
+  <!-- CTA ************ -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Moje služby',
+        href: getPermalink('/sluzby'),
+        icon: 'tabler:arrow-right',
+      },
+      { text: 'Kontakt', href: getPermalink('/kontakt') },
+    ]}
+    title="Využijte mých znalostí"
+    subtitle="Potřebujete poradit s fotovoltaikou nebo energetikou? Podívejte se, s čím vám mohu pomoci."
+  />
+</Layout>

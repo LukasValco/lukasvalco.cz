@@ -1,0 +1,119 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+import { getPermalink } from '~/utils/permalinks';
+
+const metadata = {
+  title: 'Služby',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Služby"
+    actions={[{ variant: 'primary', text: 'Spojme se', href: getPermalink('/kontakt'), icon: 'tabler:mail' }]}
+  >
+    <Fragment slot="title">
+      S čím vám mohu <span class="text-accent dark:text-white">pomoci</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Vycházím z každodenní praxe v technické podpoře fotovoltaiky. Řeším přímo a srozumitelně — telefon mám raději než
+      e-mail.
+    </Fragment>
+  </Hero>
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Oblasti poradenství"
+    subtitle="Konkrétní služby, ve kterých nabízím odbornou podporu."
+    columns={2}
+    items={[
+      {
+        title: 'Konzultace k fotovoltaice',
+        description:
+          'Probereme váš FV systém — návrh, provoz, monitoring i řešení problémů. Pomohu se zorientovat a najít řešení.',
+        icon: 'tabler:solar-panel',
+      },
+      {
+        title: 'Simulace v PV*SOL',
+        description:
+          'Návrh a simulace FV systémů v profesionálním softwaru PV*SOL (certifikát Advanced) — výnosy, zastínění, zátěžové profily, 2D/3D.',
+        icon: 'tabler:chart-dots',
+      },
+      {
+        title: 'Energetické poradenství',
+        description:
+          'Pomoc s rozhodováním kolem akumulace, výkupu a spotřeby energie. Vysvětlím možnosti srozumitelně, bez zbytečného žargonu.',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: 'Termovizní diagnostika dronem',
+        description:
+          'Kontrola FV panelů termokamerou DJI Mavic 3T — detekce defektů a teplotních anomálií na střeše bez nutnosti výstupu.',
+        icon: 'tabler:drone',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="Jak pracuji"
+    title="Přímo, srozumitelně a z praxe"
+    image={{
+      src: '~/assets/images/work/placeholder-dron-termovize.png',
+      alt: 'Kreslený návrh: Lukáš ovládá dron nad FV panely (bude nahrazeno vlastní fotkou)',
+      width: 800,
+      height: 600,
+    }}
+    items={[
+      {
+        title: 'Vím, kde hledat',
+        description:
+          'Nebazíruji na tom, že vše vím nazpaměť — důležité je rychle a spolehlivě dojít k řešení konkrétního problému.',
+      },
+      {
+        title: 'Promyšlené výstupy',
+        description: 'Možnosti zvažuji důkladně. Raději věc promyslím, než abych nabízel polovičaté řešení.',
+      },
+      {
+        title: 'Sdílení znalostí',
+        description:
+          'Vysvětlím vám, proč věci fungují tak, jak fungují — abyste se mohli rozhodnout sami a informovaně.',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <p>Mám pocit, že jsem se pro technickou podporu narodil. Naplňuje mě, když mohu být užitečný.</p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-subtle dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Napište mi',
+        href: getPermalink('/kontakt'),
+        icon: 'tabler:mail',
+      },
+    ]}
+    title="Pojďme to probrat"
+    subtitle="Napište mi, co řešíte. Ozvu se a společně najdeme cestu."
+  />
+</Layout>

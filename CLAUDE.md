@@ -68,7 +68,24 @@ Reálný obsah pro web je v **Atlasu** (`D:\projects\atlas`):
 | Certifikáty (seznam)  | `raw/personal/certifikaty/index.md`                |
 | Certifikáty (PDF)     | `raw/personal/certifikaty/`                        |
 | Osobní brand, záměr   | `raw/personal/2026-06-12-osobni-brand-myslenky.md` |
+| Klíčový citát + den   | `raw/personal/2026-06-12-eon-magazin-jeden-den.md` |
 | Plán webu             | `ops/personal-web.md`                              |
+
+---
+
+## Assety (vizuály) — průběžně doplňujeme
+
+Assety přibývají postupně. **Pokud soubor ještě neexistuje, označ místo jako placeholder a pokračuj** — neblokuj práci.
+
+| Asset                      | Kam patří v repu                                                      |
+| -------------------------- | --------------------------------------------------------------------- |
+| Fotky — portrét            | `src/assets/images/portrait/`                                         |
+| Fotky — pracovní           | `src/assets/images/work/` (dron, FV panely, termovize, pracovní stůl) |
+| Fotky — lifestyle          | `src/assets/images/lifestyle/` (zahrada, dům s FV, dron pro přírodu)  |
+| PDF certifikáty ke stažení | `public/certifikaty/`                                                 |
+| Logo ČFA                   | `public/logo-cfa.png` (Lukáš má oprávnění používat jako FV expert)    |
+
+**Kam navigovat Lukáše s fotkami:** fotky chodí z OneDrive → uložit do příslušné podsložky `src/assets/images/{portrait,work,lifestyle}/`. PDF certifikátů → `public/certifikaty/`.
 
 ---
 
@@ -106,5 +123,37 @@ Cloudflare Pages automaticky nasadí do ~60 sekund.
 
 ## Aktuální priorita
 
-Nahradit ukázkový obsah AstroWind za reálný obsah Lukáše Valčo.
-Začínáme od `src/config.yaml` a hlavní homepage (`src/pages/index.astro`).
+**Fáze 1 — textová verze + základní vizuály hotové.**
+
+Hotovo:
+
+- Konfigurace, navigace, všechny stránky Fáze 1 (Domů, O mně, Kariéra, Certifikáty, Služby, Kontakt, 404, blog + uvítací post)
+- Portrétová fotka (Hero textový, fotka v sekci „Kdo jsem")
+- Logo ČFA na stránce Certifikáty
+- 8 PDF certifikátů ke stažení
+- Favicon (SVG, ICO, apple-touch-icon) — monogram „LV" v brand modré
+- OG image (1200×630) pro sdílení na sítích
+- Build i `npm run check` procházejí čistě
+
+Zbývá:
+
+- **Nasazení** — commit + push → Cloudflare nasadí na lukasvalco.cz
+- Pracovní fotky (dron, FV panely, termovize) → `src/assets/images/work/`
+- Lifestyle fotky (zahrada, dům s FV) → `src/assets/images/lifestyle/`
+- Detailní revize textů Lukášem
+
+## Generátor ikon
+
+Skript `scripts/generate-icons.mjs` generuje:
+
+- `src/assets/favicons/favicon.ico` (16/32/48/64px)
+- `src/assets/favicons/apple-touch-icon.png` (180×180)
+- `src/assets/images/og-image.png` (1200×630, s portrétem)
+
+Zdrojem je `src/assets/favicons/favicon.svg` + `portrait-business.png`. Spuštění:
+
+```bash
+node scripts/generate-icons.mjs
+```
+
+> Pozn.: shell na tomto Windows nepodporuje sandbox (`workspace_readwrite`) — příkazy spouštět mimo sandbox.

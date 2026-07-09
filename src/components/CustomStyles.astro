@@ -1,62 +1,61 @@
 ---
 import '@fontsource-variable/inter';
-
-// 'DM Sans'
-// Nunito
-// Dosis
-// Outfit
-// Roboto
-// Literata
-// 'IBM Plex Sans'
-// Karla
-// Poppins
-// 'Fira Sans'
-// 'Libre Franklin'
-// Inconsolata
-// Raleway
-// Oswald
-// 'Space Grotesk'
-// Urbanist
+import '@fontsource-variable/space-grotesk';
 ---
 
 <style is:inline>
   :root {
     --aw-font-sans: 'Inter Variable';
     --aw-font-serif: 'Inter Variable';
-    --aw-font-heading: 'Inter Variable';
+    --aw-font-heading: 'Space Grotesk Variable';
 
-    --aw-color-primary: rgb(1 97 239);
-    --aw-color-secondary: rgb(1 84 207);
-    --aw-color-accent: rgb(109 40 217);
+    /* Solární kontrast — světlý režim */
+    --aw-color-primary: rgb(30 58 95); /* navy */
+    --aw-color-secondary: rgb(21 43 71); /* darker navy (hover) */
+    --aw-color-accent: rgb(180 83 9); /* solar amber */
+    --aw-color-accent-2: rgb(181 80 46); /* terracotta (štítky/hover) */
 
-    --aw-color-text-heading: rgb(0 0 0);
-    --aw-color-text-default: rgb(16 16 16);
-    --aw-color-text-muted: rgb(16 16 16 / 66%);
-    --aw-color-bg-page: rgb(255 255 255);
+    --aw-color-text-heading: rgb(18 35 59);
+    --aw-color-text-default: rgb(31 41 55);
+    --aw-color-text-muted: rgb(88 98 116);
 
-    --aw-color-bg-page-dark: rgb(3 6 32);
+    --aw-color-bg-page: rgb(251 247 240); /* teplá krémová */
+    --aw-color-surface: rgb(255 255 255); /* karty */
+    --aw-color-subtle: rgb(243 236 222); /* střídavé sekce */
+    --aw-color-border: rgb(228 217 198);
+
+    --aw-color-bg-page-dark: rgb(14 24 38);
 
     ::selection {
-      background-color: lavender;
+      background-color: rgb(245 217 168);
+      color: rgb(18 35 59);
     }
   }
 
   .dark {
     --aw-font-sans: 'Inter Variable';
     --aw-font-serif: 'Inter Variable';
-    --aw-font-heading: 'Inter Variable';
+    --aw-font-heading: 'Space Grotesk Variable';
 
-    --aw-color-primary: rgb(1 97 239);
-    --aw-color-secondary: rgb(1 84 207);
-    --aw-color-accent: rgb(109 40 217);
+    /* Solární kontrast — tmavý režim */
+    --aw-color-primary: rgb(127 178 232); /* light navy tint */
+    --aw-color-secondary: rgb(94 151 214);
+    --aw-color-accent: rgb(245 158 11); /* amber */
+    --aw-color-accent-2: rgb(232 129 90); /* terracotta */
 
-    --aw-color-text-heading: rgb(247, 248, 248);
-    --aw-color-text-default: rgb(229 236 246);
-    --aw-color-text-muted: rgb(229 236 246 / 66%);
-    --aw-color-bg-page: rgb(3 6 32);
+    --aw-color-text-heading: rgb(245 240 230);
+    --aw-color-text-default: rgb(220 227 236);
+    --aw-color-text-muted: rgb(149 162 180);
+
+    --aw-color-bg-page: rgb(14 24 38);
+    --aw-color-surface: rgb(23 35 58);
+    --aw-color-subtle: rgb(18 30 48);
+    --aw-color-border: rgb(42 56 82);
+
+    --aw-color-bg-page-dark: rgb(14 24 38);
 
     ::selection {
-      background-color: black;
+      background-color: rgb(30 58 95);
       color: snow;
     }
   }

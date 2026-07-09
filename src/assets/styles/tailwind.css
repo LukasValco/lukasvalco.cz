@@ -10,8 +10,13 @@
   --color-primary: var(--aw-color-primary);
   --color-secondary: var(--aw-color-secondary);
   --color-accent: var(--aw-color-accent);
+  --color-accent2: var(--aw-color-accent-2);
   --color-default: var(--aw-color-text-default);
   --color-muted: var(--aw-color-text-muted);
+  --color-heading: var(--aw-color-text-heading);
+  --color-surface: var(--aw-color-surface);
+  --color-subtle: var(--aw-color-subtle);
+  --color-line: var(--aw-color-border);
 
   --font-sans:
     'var(--aw-font-sans, ui-sans-serif)', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
@@ -45,6 +50,13 @@
   background-color: var(--aw-color-bg-page);
 }
 
+/* Hero pozadí — teplé „slunce" vlevo přechází doprava do modré */
+@utility hero-aura {
+  background-image:
+    radial-gradient(40rem 32rem at 4% 4%, rgb(245 158 11 / 0.32), transparent 62%),
+    linear-gradient(110deg, rgb(250 204 21 / 0.24) 0%, rgb(251 247 240 / 0) 48%, rgb(37 99 235 / 0.18) 100%);
+}
+
 @utility text-page {
   color: var(--aw-color-text-page);
 }
@@ -54,11 +66,11 @@
 }
 
 @utility btn {
-  @apply inline-flex items-center justify-center rounded-full border-gray-400 border bg-transparent font-medium text-center text-base text-page leading-snug transition py-3.5 px-6 md:px-8 ease-in duration-200 focus:ring-blue-500 focus:ring-offset-blue-200 focus:ring-2 focus:ring-offset-2 hover:bg-gray-100 hover:border-gray-600 dark:text-slate-300 dark:border-slate-500 dark:hover:bg-slate-800 dark:hover:border-slate-800 cursor-pointer;
+  @apply inline-flex items-center justify-center rounded-full border-gray-400 border bg-transparent font-medium text-center text-base text-page leading-snug transition py-3.5 px-6 md:px-8 ease-in duration-200 focus:ring-primary focus:ring-2 focus:ring-offset-2 hover:bg-gray-100 hover:border-gray-600 dark:text-slate-300 dark:border-slate-500 dark:hover:bg-slate-800 dark:hover:border-slate-800 cursor-pointer;
 }
 
 @utility btn-primary {
-  @apply btn font-semibold bg-primary text-white border-primary hover:bg-secondary hover:border-secondary hover:text-white dark:text-white dark:bg-primary dark:border-primary dark:hover:border-secondary dark:hover:bg-secondary;
+  @apply btn font-semibold bg-accent text-white border-accent hover:bg-accent/90 hover:border-accent/90 dark:bg-accent dark:border-accent dark:text-[var(--aw-color-bg-page)] dark:hover:bg-accent/90 dark:hover:border-accent/90;
 }
 
 @utility btn-secondary {
@@ -69,13 +81,19 @@
   @apply btn border-none shadow-none text-muted hover:text-gray-900 dark:text-gray-400 dark:hover:text-white;
 }
 
+.dark .hero-aura {
+  background-image:
+    radial-gradient(40rem 32rem at 4% 4%, rgb(245 158 11 / 0.16), transparent 62%),
+    linear-gradient(110deg, rgb(245 158 11 / 0.1) 0%, rgb(14 24 38 / 0) 48%, rgb(59 130 246 / 0.16) 100%);
+}
+
 #header.scroll > div:first-child {
-  @apply bg-page md:bg-white/90 md:backdrop-blur-md;
+  @apply bg-page md:bg-[#fbf7f0e6] md:backdrop-blur-md;
   box-shadow: 0 0.375rem 1.5rem 0 rgb(140 152 164 / 13%);
 }
 .dark #header.scroll > div:first-child,
 #header.scroll.dark > div:first-child {
-  @apply bg-page md:bg-[#030621e6] border-b border-gray-500/20;
+  @apply bg-page md:bg-[#0e1826e6] border-b border-gray-500/20;
   box-shadow: none;
 }
 

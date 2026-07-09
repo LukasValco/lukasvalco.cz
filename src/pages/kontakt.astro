@@ -1,0 +1,48 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import HeroText from '~/components/widgets/HeroText.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Kontakt',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText
+    tagline="Kontakt"
+    title="Spojme se"
+    subtitle="Hledáte poradenství k fotovoltaice, chcete probrat solární systém, nebo vás zajímá energetika? Napište mi — ozvu se."
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    columns={2}
+    items={[
+      {
+        title: 'E-mail',
+        description: 'Lukas.Valco@outlook.com',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'LinkedIn',
+        description: 'linkedin.com/in/lukasvalco',
+        icon: 'tabler:brand-linkedin',
+      },
+      {
+        title: 'Kde mě najdete',
+        description: 'České Budějovice / Dražíč, Jihočeský kraj',
+        icon: 'tabler:map-pin',
+      },
+      {
+        title: 'Jak pracuji',
+        description: 'Telefon a přímou domluvu mám raději než e-mail — věci se tak řeší rychleji.',
+        icon: 'tabler:messages',
+      },
+    ]}
+  />
+</Layout>
