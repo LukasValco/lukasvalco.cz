@@ -20,10 +20,18 @@ export interface Props {
   secondaryLinks: Array<Link>;
   socialLinks: Array<Link>;
   footNote?: string;
+  description?: string;
   theme?: string;
 }
 
-const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme = 'light' } = Astro.props;
+const {
+  socialLinks = [],
+  secondaryLinks = [],
+  links = [],
+  footNote = '',
+  description = '',
+  theme = 'light',
+} = Astro.props;
 ---
 
 <footer class:list={[{ dark: theme === 'dark' }, 'relative border-t border-gray-200 dark:border-slate-800 not-prose']}>
@@ -36,6 +44,7 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
         <div class="mb-2">
           <a class="inline-block font-bold text-xl" href={getHomePermalink()}>{SITE?.name}</a>
         </div>
+        {description && <p class="text-sm text-muted mb-3 max-w-xs leading-relaxed">{description}</p>}
         <div class="text-sm text-muted flex gap-1">
           {
             secondaryLinks.map(({ text, href }, index) => (

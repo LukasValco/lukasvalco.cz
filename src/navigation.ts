@@ -31,6 +31,8 @@ export const headerData = {
 };
 
 export const footerData = {
+  description:
+    'Fotovoltaický expert ČFA a energetický poradce. Pomáhám lidem rozumět fotovoltaice a energetice — z praxe, srozumitelně.',
   links: [
     {
       title: 'O mně',
@@ -56,7 +58,10 @@ export const footerData = {
       ],
     },
   ],
-  secondaryLinks: [],
+  secondaryLinks: [
+    { text: 'Ochrana soukromí', href: getPermalink('/privacy') },
+    { text: 'Podmínky', href: getPermalink('/terms') },
+  ],
   socialLinks: [
     { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/in/lukasvalco/' },
     { ariaLabel: 'GitHub', icon: 'tabler:brand-github', href: 'https://github.com/LukasValco' },

@@ -123,24 +123,28 @@ Cloudflare Pages automaticky nasadí do ~60 sekund.
 
 ## Aktuální priorita
 
-**Fáze 1 — textová verze + základní vizuály hotové.**
+**Fáze 1 — nasazeno na lukasvalco.cz (červenec 2026).**
 
 Hotovo:
 
-- Konfigurace, navigace, všechny stránky Fáze 1 (Domů, O mně, Kariéra, Certifikáty, Služby, Kontakt, 404, blog + uvítací post)
-- Portrétová fotka (Hero textový, fotka v sekci „Kdo jsem")
-- Logo ČFA na stránce Certifikáty
-- 8 PDF certifikátů ke stažení
-- Favicon (SVG, ICO, apple-touch-icon) — monogram „LV" v brand modré
-- OG image (1200×630) pro sdílení na sítích
-- Build i `npm run check` procházejí čistě
+- Všechny stránky Fáze 1 + redesign (Solar Contrast paleta, hero gradient)
+- Kreslené ilustrace ve všech sekcích (orientační náhrada za budoucí fotky)
+- 8 PDF certifikátů ke stažení, logo ČFA, favicon, OG image
+- Projekty slunora.cz a renora.cz v patičce
+- SEO: JSON-LD (Person, WebSite, ProfessionalService), skip link, metadata per stránka
 
 Zbývá:
 
-- **Nasazení** — commit + push → Cloudflare nasadí na lukasvalco.cz
-- Pracovní fotky (dron, FV panely, termovize) → `src/assets/images/work/`
-- Lifestyle fotky (zahrada, dům s FV) → `src/assets/images/lifestyle/`
-- Detailní revize textů Lukášem
+- Revize textů Lukášem (průběžně)
+- Reálné fotografie místo kreslených ilustrací
+- PDF certifikátu Energetického poradce (po obdržení)
+- Google Search Console / Analytics (volitelné)
+
+**Fáze 2 — obsah a nástroje** (další krok):
+
+- Blog — první odborné články
+- Projekty slunora.cz + renora.cz — rozšíření sekcí
+- První kalkulačka (React island)
 
 ## Generátor ikon
 

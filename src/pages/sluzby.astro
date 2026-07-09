@@ -5,8 +5,10 @@ import Hero from '~/components/widgets/Hero.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
 
 import { getPermalink } from '~/utils/permalinks';
+import { professionalServiceSchema } from '~/utils/schema';
 
 const metadata = {
   title: 'Služby',
@@ -16,6 +18,7 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
+  <JsonLd schema={professionalServiceSchema} />
   <!-- Hero Widget ******************* -->
 
   <Hero

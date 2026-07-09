@@ -9,8 +9,10 @@ import Content from '~/components/widgets/Content.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
 
 import { getPermalink } from '~/utils/permalinks';
+import { personSchema, professionalServiceSchema, websiteSchema } from '~/utils/schema';
 
 const metadata = {
   title: 'Lukáš Valčo — Fotovoltaický expert a energetický poradce',
@@ -48,6 +50,7 @@ const oblasti = [
 ---
 
 <Layout metadata={metadata}>
+  <JsonLd schema={[personSchema, websiteSchema, professionalServiceSchema]} />
   <!-- Hero — dvousloupcový editorial ******************* -->
 
   <section class="not-prose relative overflow-hidden md:-mt-[76px]">
