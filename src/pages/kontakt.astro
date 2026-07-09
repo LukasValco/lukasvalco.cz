@@ -6,6 +6,8 @@ import Features2 from '~/components/widgets/Features2.astro';
 
 const metadata = {
   title: 'Kontakt',
+  description:
+    'Ozvěte se Lukášovi Valčovi — poradenství k fotovoltaice, solárním systémům a energetice. E-mail, LinkedIn, České Budějovice / Dražíč, Jihočeský kraj.',
 };
 ---
 
@@ -25,12 +27,14 @@ const metadata = {
     items={[
       {
         title: 'E-mail',
-        description: 'Lukas.Valco@outlook.com',
+        description:
+          '<a href="mailto:Lukas.Valco@outlook.com" class="text-primary hover:underline">Lukas.Valco@outlook.com</a>',
         icon: 'tabler:mail',
       },
       {
         title: 'LinkedIn',
-        description: 'linkedin.com/in/lukasvalco',
+        description:
+          '<a href="https://linkedin.com/in/lukasvalco" target="_blank" rel="noopener" class="text-primary hover:underline">linkedin.com/in/lukasvalco</a>',
         icon: 'tabler:brand-linkedin',
       },
       {

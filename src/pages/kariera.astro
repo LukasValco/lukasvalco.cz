@@ -10,6 +10,8 @@ import { getPermalink } from '~/utils/permalinks';
 
 const metadata = {
   title: 'Kariéra',
+  description:
+    'Kariérní cesta Lukáše Valča od IT servisu a terénní podpory k technické podpoře solárních systémů v E.ON. Proaktivita a investice do sebe jako červená nit.',
 };
 ---
 
@@ -28,6 +30,10 @@ const metadata = {
     title="Pracovní zkušenosti"
     items={[
       {
+        title: 'Dnes',
+        icon: 'tabler:check',
+      },
+      {
         title:
           'Senior Specialista TP — Solární Systémy <br /> <span class="font-normal">E.ON Energie, a.s., České Budějovice</span> <br /> <span class="text-sm font-normal">2021 – dosud</span>',
         description:
@@ -43,8 +49,9 @@ const metadata = {
       {
         title:
           'Service Technician <br /> <span class="font-normal">URC Systems, Praha</span> <br /> <span class="text-sm font-normal">2015 – 2019</span>',
-        description: 'Servis vozidlových systémů pro Policii ČR, roboti Talon. Certifikace v Bostonu (QinetiQ).',
-        icon: 'tabler:briefcase',
+        description:
+          'Servis speciálních vozidlových systémů pro Policii ČR. Servis robotických systémů Talon pro Armádu ČR — včetně školení a certifikace v Bostonu (QinetiQ).',
+        icon: 'tabler:robot',
       },
       {
         title:
@@ -66,13 +73,15 @@ const metadata = {
       },
       {
         title:
-          'Technik výpočetní techniky / Postservisu <br /> <span class="font-normal">Česká pošta</span> <br /> <span class="text-sm font-normal">2006 – 2009</span>',
-        description: 'IT servis a podpora, servis kompletačních linek Kern.',
+          'Technik výpočetní techniky <br /> <span class="font-normal">Česká pošta</span> <br /> <span class="text-sm font-normal">2007 – 2009</span>',
+        description: 'IT servis a podpora.',
         icon: 'tabler:briefcase',
       },
       {
-        title: 'Dnes',
-        icon: 'tabler:check',
+        title:
+          'Technik Postservisu <br /> <span class="font-normal">Česká pošta</span> <br /> <span class="text-sm font-normal">2006 – 2007</span>',
+        description: 'Servis kompletačních linek Kern.',
+        icon: 'tabler:briefcase',
       },
     ]}
     classes={{ container: 'max-w-3xl' }}
@@ -84,6 +93,12 @@ const metadata = {
     isReversed
     tagline="Kariérní vzorec"
     title="Investice do sebe → příležitosti přicházejí samy"
+    image={{
+      src: '~/assets/images/portrait/avatar-omne-cesta.png',
+      alt: 'Kreslený návrh: Lukáš u návrhu FV systému (bude nahrazeno vlastní fotkou)',
+      width: 800,
+      height: 600,
+    }}
     items={[
       {
         title: 'Pivot do FV (2019/2020)',
