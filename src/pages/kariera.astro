@@ -27,7 +27,7 @@ const metadata = {
   <!-- Steps Widget ****************** -->
 
   <Steps
-    title="Pracovní zkušenosti"
+    title="Pracovní zkušenosti a vzdělávání"
     items={[
       {
         title: 'Dnes',
@@ -35,10 +35,17 @@ const metadata = {
       },
       {
         title:
-          'Senior Specialista TP — Solární Systémy <br /> <span class="font-normal">E.ON Energie, a.s., České Budějovice</span> <br /> <span class="text-sm font-normal">2021 – dosud</span>',
+          'Senior specialista technické podpory — solární systémy <br /> <span class="font-normal">E.ON Energie, a.s., České Budějovice</span> <br /> <span class="text-sm font-normal">2021 – dosud</span>',
         description:
           'FV technická podpora, školení, znalostní báze. Vedení malého týmu, řešení eskalovaných případů, tvorba e-learningu a zkušenosti s termovizní kontrolou FV panelů dronem. Podílím se i na revizi odborných článků o fotovoltaice v poradně E.ON.',
         icon: 'tabler:solar-panel',
+      },
+      {
+        title:
+          'Výuční list — elektrikář <br /> <span class="font-normal">Roční rekvalifikační kurz při zaměstnání</span> <br /> <span class="text-sm font-normal">2023 – 2024</span>',
+        description:
+          'Profesní kvalifikace montér slaboproudých zařízení, elektrických rozvaděčů, elektrických sítí a hromosvodů. Doplnil jsem si ji z vlastní iniciativy vedle práce.',
+        icon: 'tabler:school',
       },
       {
         title:
@@ -67,7 +74,7 @@ const metadata = {
       },
       {
         title:
-          'Vedoucí divize obchod <br /> <span class="font-normal">SEGURO s.r.o.</span> <br /> <span class="text-sm font-normal">2009 – 2013</span>',
+          'Vedoucí obchodní divize <br /> <span class="font-normal">SEGURO s.r.o.</span> <br /> <span class="text-sm font-normal">2009 – 2013</span>',
         description: 'Kamerové systémy, zabezpečení, e-shop.',
         icon: 'tabler:briefcase',
       },
@@ -93,6 +100,11 @@ const metadata = {
     isReversed
     tagline="Kariérní vzorec"
     title="Investice do sebe → příležitosti přicházejí samy"
+    callToAction={{
+      text: 'Jak to probíhalo krok za krokem',
+      href: getPermalink('/blog/proaktivita-a-zmena-oboru'),
+      icon: 'tabler:chevron-right',
+    }}
     image={{
       src: '~/assets/images/portrait/avatar-omne-cesta.png',
       alt: 'Kreslený návrh: Lukáš u návrhu FV systému (bude nahrazeno vlastní fotkou)',
@@ -101,12 +113,12 @@ const metadata = {
     }}
     items={[
       {
-        title: 'Pivot do FV (2019/2020)',
+        title: 'Změna oboru (2019/2020)',
         description:
           'Vědomé, proaktivní rozhodnutí — identifikoval jsem perspektivní obor, sám si doplnil vzdělání (e-learning) a upravil profil na LinkedIn.',
       },
       {
-        title: 'Inbound nabídky',
+        title: 'Nabídky přišly samy',
         description: 'Výsledkem byly dvě po sobě jdoucí nabídky bez aktivního hledání — Fronius, poté E.ON.',
       },
       {
