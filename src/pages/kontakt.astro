@@ -17,18 +17,17 @@ const metadata = {
   <HeroText
     tagline="Kontakt"
     title="Spojme se"
-    subtitle="Hledáte poradenství k fotovoltaice, chcete probrat solární systém, nebo vás zajímá energetika? Napište mi — ozvu se."
+    subtitle="Hledáte poradenství k fotovoltaice, chcete probrat solární systém, nebo vás zajímá energetika? Zavolejte nebo napište — ozvu se."
     callToAction={{
       variant: 'primary',
+      text: 'Zavolat',
+      href: 'tel:+420724468701',
+      icon: 'tabler:phone',
+    }}
+    callToAction2={{
       text: 'Napsat e-mail',
       href: 'mailto:Lukas.Valco@outlook.com',
       icon: 'tabler:mail',
-    }}
-    callToAction2={{
-      text: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/lukasvalco/',
-      icon: 'tabler:brand-linkedin',
-      target: '_blank',
     }}
   />
 
@@ -37,6 +36,12 @@ const metadata = {
   <Features2
     columns={2}
     items={[
+      {
+        title: 'Telefon',
+        description:
+          '<a href="tel:+420724468701" class="text-primary hover:underline">+420 724 468 701</a><br /><span class="text-sm">Telefon a přímou domluvu mám raději než e-mail — věci se tak řeší rychleji.</span>',
+        icon: 'tabler:phone',
+      },
       {
         title: 'E-mail',
         description:
@@ -53,11 +58,6 @@ const metadata = {
         title: 'Kde mě najdete',
         description: 'České Budějovice / Dražíč, Jihočeský kraj',
         icon: 'tabler:map-pin',
-      },
-      {
-        title: 'Jak pracuji',
-        description: 'Telefon a přímou domluvu mám raději než e-mail — věci se tak řeší rychleji.',
-        icon: 'tabler:messages',
       },
     ]}
   />

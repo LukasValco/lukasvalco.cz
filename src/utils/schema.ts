@@ -21,6 +21,7 @@ export const personSchema = {
   },
   sameAs: ['https://www.linkedin.com/in/lukasvalco/', 'https://github.com/LukasValco'],
   email: 'Lukas.Valco@outlook.com',
+  telephone: '+420724468701',
   knowsAbout: [
     'Fotovoltaika',
     'Energetické poradenství',
@@ -46,6 +47,8 @@ export const professionalServiceSchema = {
   name: 'Lukáš Valčo — poradenství k fotovoltaice a energetice',
   url: String(getCanonical('/sluzby')),
   areaServed: 'CZ',
+  telephone: '+420724468701',
+  email: 'Lukas.Valco@outlook.com',
   serviceType: [
     'Konzultace k fotovoltaice',
     'Simulace v PV*SOL',
