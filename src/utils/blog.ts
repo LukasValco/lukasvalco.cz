@@ -57,7 +57,8 @@ const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> =
     metadata = {},
   } = data;
 
-  const slug = cleanSlug(id); // cleanSlug(rawSlug.split('/').pop());
+  // Soubory se jmenují RRRR-MM-DD-nazev.md kvůli řazení, ale datum do URL nepatří.
+  const slug = cleanSlug(id.replace(/^\d{4}-\d{2}-\d{2}-/, ''));
   const publishDate = new Date(rawPublishDate);
   const updateDate = rawUpdateDate ? new Date(rawUpdateDate) : undefined;
 

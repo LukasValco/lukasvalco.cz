@@ -23,16 +23,16 @@ který aktivně sdílí znalosti a pomáhá druhým.
 
 ## Fázový plán
 
-### Fáze 1 — osobní hub (právě stavíme)
+### Fáze 1 — osobní hub ✅ hotovo
 
 - Bio / O mně
 - Kariéra / Timeline
 - Certifikáty a vzdělání
 - Kontakt
-- Blog (prázdný, infrastruktura připravená)
+- Blog (6 článků, viz `src/data/post/`)
 - Přehled služeb (konzultace, PV\*SOL simulace)
 
-### Fáze 2 — obsah a nástroje
+### Fáze 2 — obsah a nástroje (právě běží)
 
 - Blog roste (témata: FV, AI, drony, osobní rozvoj, kariéra)
 - Znalostní báze (Markdown, Content Collections)
@@ -60,16 +60,23 @@ který aktivně sdílí znalosti a pomáhá druhým.
 
 ## Obsah — kde ho najdeš
 
-Reálný obsah pro web je v **Atlasu** (`D:\projects\atlas`):
+> ⚠️ **Atlas už osobní obsah neobsahuje.** Původní cesty (`wiki/personal/lukas-valco.md`,
+> `raw/personal/certifikaty/`, `ops/personal-web.md`) zanikly při přestavbě Atlasu
+> v červenci 2026. Dnešní Atlas (`D:\projects\atlas`) drží jen složky `pages/`,
+> `denik/` a `sources/` — o Lukášově biografii tam není nic.
 
-| Co                    | Kde v Atlasu                                       |
-| --------------------- | -------------------------------------------------- |
-| Bio, kariéra, hodnoty | `wiki/personal/lukas-valco.md`                     |
-| Certifikáty (seznam)  | `raw/personal/certifikaty/index.md`                |
-| Certifikáty (PDF)     | `raw/personal/certifikaty/`                        |
-| Osobní brand, záměr   | `raw/personal/2026-06-12-osobni-brand-myslenky.md` |
-| Klíčový citát + den   | `raw/personal/2026-06-12-eon-magazin-jeden-den.md` |
-| Plán webu             | `ops/personal-web.md`                              |
+**Zdrojem pravdy o obsahu je dnes tenhle repozitář.** Konkrétně:
+
+| Co                     | Kde v repu                                                         |
+| ---------------------- | ------------------------------------------------------------------ |
+| Bio, hodnoty, cesta    | `src/pages/o-mne.astro`                                            |
+| Kariéra / timeline     | `src/pages/kariera.astro`                                          |
+| Certifikáty (data)     | `src/pages/certifikaty.astro` (pole `expertModules`, `otherCerts`) |
+| Služby                 | `src/pages/sluzby.astro`                                           |
+| Blog                   | `src/data/post/`                                                   |
+| SEO strukturovaná data | `src/utils/schema.ts`                                              |
+
+**Fakta nevymýšlej.** Když něco chybí, zeptej se Lukáše — nedoplňuj z domněnek.
 
 ---
 
@@ -114,16 +121,19 @@ Cloudflare Pages automaticky nasadí do ~60 sekund.
 ## Konvence
 
 - **Jazyk webu:** čeština primárně, angličtina sekundárně (připravit pro obě)
-- **Obsah:** vždy čerpat z Atlasu, nevymýšlet fakta
+- **Obsah:** nevymýšlet fakta — zdroje viz sekce „Obsah — kde ho najdeš“
 - **Styl:** osobní, přístupný, odborný — žádný korporátní jazyk
-- **Blog posty:** `src/data/post/RRRR-MM-DD-nazev.md`
+- **Blog posty:** `src/data/post/RRRR-MM-DD-nazev.md` — datum v názvu je jen kvůli
+  řazení, z URL ho odstraňuje `src/utils/blog.ts` (URL je `/blog/nazev`)
 - **Obrázky:** `src/assets/images/`
+- **Žádná angličtina v UI.** AstroWind má výchozí texty anglicky — při použití
+  nového widgetu vždy zkontroluj, jestli nepropašoval „View all posts“ apod.
 
 ---
 
 ## Aktuální priorita
 
-**Fáze 1 — nasazeno na lukasvalco.cz (červenec 2026).**
+**Fáze 1 nasazena na lukasvalco.cz. Stav k 31. 7. 2026.**
 
 Hotovo:
 
@@ -132,17 +142,23 @@ Hotovo:
 - 8 PDF certifikátů ke stažení, logo ČFA, favicon, OG image
 - Projekty slunora.cz a renora.cz v patičce
 - SEO: JSON-LD (Person, WebSite, ProfessionalService), skip link, metadata per stránka
+- Blog: 6 článků (FV, energetika, termovize, AI, kariéra) s vlastní grafikou
+- Ochrana soukromí a Podmínky užití — vlastní české texty (ne demo šablony)
+- Čisté URL článků bez datumového prefixu
 
 Zbývá:
 
 - Revize textů Lukášem (průběžně)
 - Reálné fotografie místo kreslených ilustrací
 - PDF certifikátu Energetického poradce (po obdržení)
-- Google Search Console / Analytics (volitelné)
+- Telefonní kontakt na `/kontakt` — stránka tvrdí „telefon mám raději než e-mail“,
+  ale číslo tam není
+- Google Search Console + analytika (nyní `googleAnalytics: null`,
+  `googleSiteVerificationId: ''` v `src/config.yaml`) — zatím se neměří nic
 
 **Fáze 2 — obsah a nástroje** (další krok):
 
-- Blog — první odborné články
+- Blog roste dál
 - Projekty slunora.cz + renora.cz — rozšíření sekcí
 - První kalkulačka (React island)
 

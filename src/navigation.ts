@@ -60,7 +60,7 @@ export const footerData = {
   ],
   secondaryLinks: [
     { text: 'Ochrana soukromí', href: getPermalink('/privacy') },
-    { text: 'Podmínky', href: getPermalink('/terms') },
+    { text: 'Podmínky užití', href: getPermalink('/terms') },
   ],
   socialLinks: [
     { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/in/lukasvalco/' },

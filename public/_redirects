@@ -1,0 +1,3 @@
+# Původní URL článků obsahovaly datum z názvu souboru. Veřejně dostupný
+# (a v sitemap.xml) byl jen tenhle jeden, ostatní se nasazují rovnou čistě.
+/blog/2026-06-12-vitejte  /blog/vitejte  301
