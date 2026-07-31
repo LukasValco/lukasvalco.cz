@@ -26,6 +26,15 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
 export default defineConfig({
   output: 'static',
 
+  // Generuje `blog/vitejte.html` místo `blog/vitejte/index.html`.
+  // Cloudflare Pages pak servíruje /blog/vitejte přímo se stavem 200 —
+  // s výchozím 'directory' by každou URL předcházel 308 redirect na
+  // tvar s lomítkem, což neodpovídá canonical odkazům ani sitemap
+  // (config.yaml má `trailingSlash: false`).
+  build: {
+    format: 'file',
+  },
+
   integrations: [
     sitemap(),
     mdx(),

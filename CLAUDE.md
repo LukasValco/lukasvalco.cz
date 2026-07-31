@@ -153,14 +153,29 @@ Zbývá:
 - PDF certifikátu Energetického poradce (po obdržení)
 - Telefonní kontakt na `/kontakt` — stránka tvrdí „telefon mám raději než e-mail“,
   ale číslo tam není
-- Google Search Console + analytika (nyní `googleAnalytics: null`,
-  `googleSiteVerificationId: ''` v `src/config.yaml`) — zatím se neměří nic
+- **Doplnit dva tokeny do `src/config.yaml`** (viz sekce Analytika níže) —
+  dokud jsou `null`, neměří se nic a Search Console web nezná
 
 **Fáze 2 — obsah a nástroje** (další krok):
 
 - Blog roste dál
 - Projekty slunora.cz + renora.cz — rozšíření sekcí
 - První kalkulačka (React island)
+
+## Analytika a Search Console
+
+Obojí je v kódu zapojené a čeká jen na token v `src/config.yaml`.
+Dokud je hodnota `null` / `''`, skript se do HTML vůbec nevloží.
+
+| Co                       | Klíč v `config.yaml`                             | Kde token vzít                                                        |
+| ------------------------ | ------------------------------------------------ | --------------------------------------------------------------------- |
+| Cloudflare Web Analytics | `analytics.vendors.cloudflareWebAnalytics.token` | Cloudflare dashboard → Analytics & Logs → Web Analytics → Manage site |
+| Google Search Console    | `site.googleSiteVerificationId`                  | Search Console → přidat zdroj → „Předpona URL“ → ověření HTML tagem   |
+
+**Cookieless záměrně.** Cloudflare Web Analytics neukládá cookies, takže web
+nepotřebuje souhlasovou lištu. Kdyby se někdy přidalo GA4, je nutné zároveň
+doprogramovat souhlas a přepsat `/privacy` — dnešní text výslovně říká,
+že web cookies nepoužívá.
 
 ## Generátor ikon
 

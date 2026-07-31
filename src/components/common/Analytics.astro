@@ -4,7 +4,23 @@ import { ANALYTICS } from 'astrowind:config';
 const id = ANALYTICS?.vendors?.googleAnalytics?.id ? String(ANALYTICS.vendors.googleAnalytics.id) : '';
 const partytown = !!ANALYTICS?.vendors?.googleAnalytics?.partytown;
 const scriptType = partytown ? 'text/partytown' : undefined;
+
+const cfToken = ANALYTICS?.vendors?.cloudflareWebAnalytics?.token
+  ? String(ANALYTICS.vendors.cloudflareWebAnalytics.token)
+  : '';
 ---
+
+{/* Cloudflare Web Analytics — bez cookies, bez souhlasu. Viz src/config.yaml. */}
+{
+  cfToken && (
+    <script
+      is:inline
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon={JSON.stringify({ token: cfToken })}
+    />
+  )
+}
 
 {id && <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${id}`} type={scriptType} />}
 

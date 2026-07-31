@@ -20,7 +20,8 @@ Web provozuji jako fyzická osoba pro sdílení znalostí a prezentaci své odbo
 Aby bylo jasno hned na začátku:
 
 - **Nepoužívá cookies.** Žádné vlastní, žádné reklamní, žádné třetích stran. Proto tu nenajdete ani otravnou cookie lištu.
-- **Nemá analytiku.** Neběží tu Google Analytics ani jiný měřicí nástroj. Nevím, kolik vás sem chodí ani odkud.
+- **Neběží tu Google Analytics** ani jiný nástroj, který by vás sledoval napříč weby.
+- **Nesleduje jednotlivce.** Neskládám si o vás profil a nedokážu poznat, že jste se vrátili.
 - **Nemá formuláře.** Nikam nezadáváte jméno, e-mail ani nic jiného.
 - **Nemá uživatelské účty ani registrace.**
 - **Nikomu nic nepředává** pro marketingové účely.
@@ -30,6 +31,23 @@ Aby bylo jasno hned na začátku:
 Jedinou věc, kterou si web ukládá u vás, je **předvolba světlého nebo tmavého režimu** (položka `theme` v `localStorage` prohlížeče). Slouží jen k tomu, aby web při další návštěvě vypadal tak, jak jste si ho nastavili.
 
 Tenhle údaj se nikam neodesílá, není osobním údajem a smažete ho vymazáním dat webu v prohlížeči.
+
+## Měření návštěvnosti
+
+Chci vědět, jestli je obsah, který tu píšu, někomu k užitku — kolik lidí web navštíví a které články je zajímají. Zjišťuji to způsobem, který vás neidentifikuje.
+
+Používám **Cloudflare Web Analytics**. Na rozdíl od běžných měřicích nástrojů:
+
+- **nepoužívá cookies** ani nic neukládá do vašeho prohlížeče,
+- **nevytváří o vás identifikátor** a nesleduje vás mezi weby ani mezi návštěvami,
+- sbírá jen souhrnné údaje: navštívená stránka, odkud jste přišli, typ zařízení a země.
+
+Výsledkem je anonymní statistika typu „tenhle článek si tento týden otevřelo 40 lidí". Ke konkrétní osobě ji přiřadit nelze — ani já, ani Cloudflare.
+
+- **Právní základ:** oprávněný zájem na vyhodnocení užitečnosti obsahu (čl. 6 odst. 1 písm. f) GDPR). Protože se neukládá nic do vašeho zařízení a data jsou anonymní, není potřeba souhlas ani cookie lišta.
+- **Zpracovatel:** Cloudflare, Inc. — [Cloudflare Web Analytics](https://www.cloudflare.com/web-analytics/).
+
+Pokud si ani tohle nepřejete, stačí běžný blokovač obsahu — měřicí skript se pak vůbec nenačte a v statistice se neobjevíte.
 
 ## Údaje zpracovávané hostingem
 
@@ -71,4 +89,4 @@ Pokud byste měli pocit, že s vašimi údaji nakládám nesprávně, můžete s
 
 ## Změny
 
-Pokud na web někdy přidám analytiku, formulář nebo jinou funkci, která by se údajů dotkla, upravím zároveň i tuhle stránku a změním datum aktualizace nahoře.
+Pokud na web někdy přidám formulář, jiný měřicí nástroj nebo cokoli dalšího, co by se údajů dotklo, upravím zároveň i tuhle stránku a změním datum aktualizace nahoře.
