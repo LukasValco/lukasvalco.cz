@@ -265,6 +265,30 @@ Každé důležité tvrzení by mělo mít jednu z následujících opor:
 
 Pokud nelze tvrzení veřejně doložit kvůli důvěrnosti zaměstnavatele, má být formulováno opatrně a bez vymyšlených metrik.
 
+### Stav a čerstvost odborného obsahu
+
+Ve fotovoltaice nestačí pouze datum publikace. U technických článků, kalkulaček a pomůcek má být podle potřeby uvedeno:
+
+- datum poslední odborné kontroly,
+- použité zdroje,
+- rozsah platnosti a předpoklady,
+- autor nebo odborný revizor,
+- stav `experiment`, `prototyp`, `pilot`, `ověřeno` nebo `historický obsah`,
+- upozornění, pokud se mohly změnit technologie, legislativa, dotační pravidla či metodika.
+
+Tím se odliší rychlý AI experiment od řešení, na které se lze profesionálně spolehnout.
+
+## Napětí, která musí web komunikovat poctivě
+
+Dřímalkův obsah obsahuje několik užitečných protikladů. Nemáme vybrat pouze líbivější polovinu:
+
+- **AI šetří čas × AI zvyšuje kognitivní zátěž:** rychlejší tvorba může vést k více projektům a rozhodování. Hodnotou je také prioritizace a schopnost zastavit.
+- **Generalista získává sílu × doménová expertiza je cennější:** vhodná pozice je široký realizátor s hlubokým odborným jádrem, ne člověk, který údajně zvládne všechno.
+- **Rychlost experimentu × produkční spolehlivost:** prototyp nebo vibe-coded nástroj není automaticky bezpečné a ověřené řešení.
+- **Velkou část udělá AI × člověk odpovídá za výsledek:** nejmenší časový podíl člověka může obsahovat nejdůležitější práci — směr, kritéria, kontrolu a odpovědnost.
+- **Viditelný osobní marketing × nedůvěra k naleštěným AI výstupům:** prezentace musí být propojena se zdroji, artefakty a obhajitelnými rozhodnutími.
+- **Rychlé učení × první pokusy čas neušetří:** kompetenci dokládá vývoj, iterace a poučení, nikoli obraz okamžité bezchybnosti.
+
 ## Obsah pro člověka i AI
 
 Z Filipova webu má smysl převzít princip více forem stejného zdroje pravdy:
@@ -333,9 +357,9 @@ Chatbot, tlačítko „Open in AI“ nebo interaktivní prezentace mají smysl j
 
 ## Dlouhodobý obsahový systém
 
-Web by měl fungovat jako publikovaná vrstva jednoho zdroje pravdy:
+Web by měl fungovat jako publikovaná vrstva jednoho zdroje pravdy. Obsah má pokud možno vznikat jako vedlejší produkt skutečné odborné práce, ne jako samostatná továrna na obecné články o AI:
 
-1. Interně vznikne nebo se aktualizuje ověřený profesní fakt, projekt či zkušenost.
+1. Reálný dotaz, technický případ nebo experiment vytvoří interní poznatek.
 2. Zkontroluje se důvěrnost, původ, datum a možnost zveřejnění.
 3. Rozhodne se, zda jde o stabilní znalost, aktuální projektový stav, názor, experiment nebo veřejný důkaz.
 4. Z jednoho schváleného podkladu vznikne webová stránka, stručná karta a případně strojově čitelná varianta.
