@@ -65,6 +65,25 @@ Následující body jsou hypotézy k diskuzi, nikoli rozhodnutí:
 4. Jaký kontext lze ukázat veřejně, aniž by došlo ke zveřejnění interních informací E.ON nebo soukromých dat?
 5. Jak zabránit tomu, aby web působil jako přehnaně optimalizovaná žádost o práci místo autentického osobního prostoru?
 
+## Lukášova reflexe po diskuzi
+
+Nejsilněji rezonuje princip **„disrupt or be disrupted“**. Nejbezpečnější pozicí nemusí být čekat, která část práce zmizí, ale aktivně přestavovat vlastní roli a připravovat se na změnu.
+
+Lukáš se chce dlouhodobě profilovat jako člověk, který:
+
+- násobí a zpřístupňuje odborné znalosti pomocí AI,
+- přitom zachovává lidský úsudek, odpovědnost a osobní rozměr,
+- dokáže se s člověkem skutečně spojit, poradit mu a přizpůsobit způsob pomoci jeho potřebám,
+- je v případě potřeby připraven nabídnout i fyzickou přítomnost a osobní kontakt, například staršímu člověku, pro kterého čistě digitální obsluha nestačí.
+
+Pracovní odlišení nespočívá v samotném poskytování odpovědí pomocí AI — ty budou široce dostupné. Přidanou hodnotou může být spojení **doménové odbornosti, AI jako multiplikátoru znalostí a skutečné lidské péče**.
+
+Pět navržených propojených úrovní HR vrstvy — rychlý profesní profil, důkazy práce, způsob práce, ověřitelné podklady a strojově čitelný kontext — dává jako výchozí rámec smysl. Není však zatím finální a bude se iterovat po dalších zdrojích.
+
+Finální podobu webu zatím neurčujeme. Návrh musí vzniknout z celkového a dlouhodobého kontextu, nikoli z optimalizace podle jediného článku.
+
 ## Pracovní teze k ověření dalšími zdroji
 
 > Osobní web pro dobu AI nemá soutěžit množstvím textu. Má poskytovat důvěryhodný, strukturovaný a ověřitelný kontext o člověku, jeho úsudku a skutečné práci.
+
+> Dlouhodobou hodnotou nemusí být samotná AI odpověď, ale člověk, který pomocí AI násobí odbornost a současně dokáže převzít odpovědnost, porozumět konkrétní situaci a nabídnout skutečný osobní kontakt.
